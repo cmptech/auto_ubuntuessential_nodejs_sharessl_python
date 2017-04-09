@@ -10,3 +10,6 @@ RUN echo export PATH=/\$NODE_VERSION/bin:\$PATH >> /node_env.sh
 RUN . /node_env.sh \
 && npm -v \
 && npm install -g node-gyp
+
+RUN . /node_env.sh \
+&& node-gyp install
